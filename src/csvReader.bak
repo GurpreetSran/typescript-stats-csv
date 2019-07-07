@@ -5,7 +5,7 @@ import { dateStringTodate } from './utils';
 
 type MatchData = [Date, string, string, number, number, MatchResults, string];
 
-export default function(fileName: string): MatchData {
+export default function(fileName: string): MatchData[] {
   return fs
     .readFileSync(fileName, {
       encoding: 'utf-8'
@@ -26,5 +26,3 @@ export default function(fileName: string): MatchData {
       }
     );
 }
-
-// Might need to convert this to class -
